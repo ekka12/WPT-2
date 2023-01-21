@@ -1,0 +1,246 @@
+
+Document:System Requirement Specification Document
+
+Title:System Reqruiement Spefication for Management Portal(UMMEED)
+
+Team:
+	Direct Users, Indirect User,Architect, Business Analyst
+	Quality Assurance Team,
+	System Analyst
+
+Objective (Purpose):
+	The UMMEED online Portal is designed  for providing financial and non financial support to the orphans ,is intended         to provide better opportunities in terms of their education and should not be left out due to any deficiency in         terms of monetary support. 
+
+
+Scope:
+	Child can see his/her status regarding financial support availablity monthly and yearwise.
+	User can donate with identification and without identification(anonymous donation) .
+	In non-financial support User with NGO can become mentor in the life of a child and provide guidance to him/her and 	
+	can also donate other items useful for the child.
+//*
+Definitions:
+	OSS: Online Shopping System
+	QA:  Quality Assurance
+	Portal: Peronalized Online Web Application
+	MIS: Management Information System
+	CRM: Customer Relation Managment
+	BI:  Business Intelligence
+	Dashboard: Personalized information presented using  BI techniques such grid, score card, graph
+*/
+Requirements:
+
+Functional Requirements:
+
+	Any annonymous User will be able to view different products avaialble for sale. Any User will be able select product to view
+	from categories avaialble. Registered shoppers will be able promote thier product for sale by adding  products to the product
+	catalog maintained by System.Staff will be able to approve or reject request for adding or removing products from product
+	catalog by shoppers. Staff will be to track and maintain stock of products available for sale. Staff will be able to raise
+	reqests for product updatation from product inventory.
+	
+	Shopper will be able request to add new product to product catalog maintained by system.  Sales Team will be able to approve or 
+	reject request  raised by shopper for adding or removing products from product catalog.
+	Shopper will be able to update  product details which have been already added to product catalog. 
+	Shoppers, sales team will be informed well in advaned about low stock  or out of stock of products in product catalog.
+	Product listing will be provided based their category, sale, quantity, likes, recommendations.
+ 
+         Consumer will be able to  add or remove products from shopping cart. System will maintain shopping cart for each consumer to 
+	 maintain list of items selected by him/her. Consumer will be able view all items from shopping cart. Shopping Cart will present
+	 product details, number of items of product selected by consumer with price and total. Consumer will be able procees for Order placement.
+		  
+         Registered Customer will be able place an order with the help of Shopping cart maintained by system. Registered Customer will be 
+	 able to cancel placed order within 24 hours. Registered customer get orders history. Registered customer can get details of order
+	 from orderes been placed. 
+		
+	 Sales team will be able get details of orders of a particular Customer. Sales team  will be able to cancel , reject or approve 
+	 orders been placed by consumer due to some policies of Business.
+	 BOD will be able to summary of orders been placed , rejected from Oroder PRocessing of System. BOD will get Business insight by 
+	 observing  daily operations  with the of getting orders information.
+		
+   	 Consumer will be provided options for payment such as through internet banking  or  UPI  or Online payment option.
+ 	 Consumer will asked to submit their payment related information.Consumer will be redirected to payment gateway for secure payment
+	 transaction.On successful payment processing using payment gateway system will notify consumer about transaction and order placement
+	 status.
+
+         Customer will be able track order status. Customer will be able track deliver using unique dispatcher id presented.
+	 Customer will be able accept or return delivery based on quality received.
+	 Delivery person will be able get delivery details sothat he / she can deliver product to customer end.
+	 Delivery person will be able to change the status of product delivered.
+	 Delivery vendor will be ablt to  list all product delivery to be done by their staff.
+	 Sales team will be able to monitor shipment  done by their vendors.
+	 Sales team will be able to track product delivery for particular customer.
+	
+         Customer will able to submit feedback about product they recived. Customer will able to  get details about product orders placed.
+	 Customer will be cancel his placed order within 24 hours. Customer will be able to update his/ her personal information. 
+	 Customer  will be to manage his profile maintained by system. Customer will be able change his credentails if required. 
+	 Customer will be notified about order status, delivery status through  SMS, Email communication.
+	 Customer will get complete information about his orders, likes, comments, details through a dashboard.
+	 Customer will be able to update his payment related information.
+
+	 System will present dashboard for Customers, Vendors, Suppliers as well as BOD.
+	 Dashboard will provide information using graph, score cards, key perfomance indicators as well Grid data prestation.
+	 BOD will be informed about bussiness operations through reports.
+	 Sales team will be able to monitor daily online shopping business activities using thier personalized dashboard.
+	 Customer will be able get thier purchase realted infomation using Customer Dashboard.
+	 Shopper will be able track thier product sale being done through online shop.
+               
+---------------------------------------------------------------------------------------------------------------------------	
+	
+NonFunctional Requirement:
+
+	Security
+		Registered Customer will allowed to place an order.	
+		Each stakeholder will be to access system  through authentication process. Who are you ?
+		System will provide access to  the content , operations using Role based security (Authorization) (Permissions based on Role)
+		Using SSL in all transactions  which will be performed stakeholder. It would protect confidential information shared by system to 
+		stake holder of Shared by stakeholder to system.
+		System will automatically log of  all stakeholder after some time due to inactiveness.
+		System will block operations for inactive  stakeholder and would redirect for authentication.
+		System  will internally maintain secure communiction channel between Servers ( Web Servers, App Servers, databse Server)
+		Sensitive data will be always encrypted across communcation.
+		User proper firewall to protect servers from out side fishing, velnerable attacks.
+
+
+	Reliability
+		The system will backup child data on regular basis and recover in short time duration to keep system 		operational.
+		Continous updates are maintained , continous Adminstration is done to keep system operational.
+		During peak hours system will maintain same user experience by managing load balancing .
+
+	Availability
+		 uptime:   24* 7  available
+		 99.999%
+	
+	Maintainability:
+		A Commercial database software will be used to maintain System data Persistence.
+		A readymade Web Server will be installed to host online portal (Web Site) to manage server capabilities.
+		IT operations team will easily monitor and configure System using Adminstrative tools provided by Servers.
+		Separate enviornment will be maintained for system for isolation in  production, testing, and development.
+
+	Portablility:
+			PDA: Portable Device Application
+		  System will provide portable User Interface ( HTML, CSS, JS) through  users will be able to access online 			 portal.
+		  System can be deployed to single server, multi server, to any OS, Cloud (Azure or AWS or GCP)
+
+	Accessibility:
+		Only registered child and admin will be able to  see details after authentication.
+		Admin can register and approve  child identification requests  based on documentation provided.
+		Registered child  will be able to view  monthly, annual child support availability through customized 		dashboard.
+		Admin will be able to see List of child and can solve any issue regarding financial and non financial 		support.
+
+	Durability:
+		  
+		  System will implement backup and recovery for retaining child data, operation data  over time.
+
+	Efficiency:
+		 Maximum number of users  will be able donate,admin can view no of donation same response time.
+		System will be able to manage all transactions with isolation.
+
+	Modularity:
+		 System will designed and developed using reusable, independent or dependent business senarios in the form 		of modules.
+		 These modules will be loosely coupled and highly cohesive.
+		 System will contain Donation link(anonymous and non-anonymous) ,Be A Friend link,Admin login ,child login 		 contact details, purpose of project and to view records of donation.  
+		 
+	
+	Scalability:
+		System will be able  to  provide  consistent user exeprience to stake holder as well as vistors irrespective 		of load.
+
+	Safety:
+		
+		online portal will be secure from malicious attack, fishing.
+		online  portal will be always kept updated with latest anit virus software.
+		data will be backed up periodically to ensure safty of data using increamental back up strategy.
+		Role based security will be applied for Application data and operations accessibility.
+				
+
+
+	Use Case Diagram:  ( UML)
+		Object Oriented Analyis and Design Notation: UML--------Unified Modeling language
+
+		Design Phase:
+
+			Use case diagram
+			Activity diagram
+			State Transition diagram
+			Class diagram
+			deployment diagram
+			object diagram
+	
+
+
+Analysis:
+	Actors:
+		visitors
+		child
+		Admin team
+		Anonymous donators
+		Non anonymous donators
+		
+		
+	  identify essential characteristics of online portal
+		we have identified use cases
+
+		1.Child  use case
+		2.Admin  use case
+		3.Donation Processing use case
+		4.non finanacial(donation) use case
+
+
+ Tables:
+
+		mySQL Database 
+		
+                .Child Status
+                          Child_id, Child_name ,Child_payment,Date_of_payment_Delivered
+                .User
+                         User_name,User_Password,User_Role
+            
+                .ViewDonators
+                         Name_of_Donator,Donated_Amount,Donator_Phone_Number
+
+
+
+REST API
+		1.ProductCatalog API
+		2.CustomerReleationship API
+		3.Orders API
+		4.Payment Rest API
+		5.Membership REST API
+					register
+					Validate
+					Changepassword
+		6.ShoppingCart API
+				GetAll
+				AddtoCart
+				RemoveFromCart
+				GetItemDetails 
+
+	
+		
+
+7038367770
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

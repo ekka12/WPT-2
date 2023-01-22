@@ -1,0 +1,207 @@
+
+Document:System Requirement Specification Document
+
+Title:System Reqruiement Spefication for Management Portal(UMMEED)
+
+Team:
+	Direct Users, Indirect User,Architect, Business Analyst
+	Quality Assurance Team,
+	System Analyst
+
+Objective (Purpose):
+	The UMMEED online Portal is designed  for providing financial and non financial support to the orphans ,
+        here various NGO's and citizens can use this portal to lend their support to orphans.
+
+
+Scope:
+	Child can see his/her status regarding financial support availablity monthly and yearwise.
+	User can donate with identification and without identification(anonymous donation) .
+	In non-financial support User with NGO can become mentor in the life of a child and provide guidance to him/her and 	
+	can also donate other items useful for the child.
+
+Requirements:
+
+Functional Requirements:
+			In Administration,an admin will be registerd into portal ,an id will be generated for each admin.
+		Only admin can register child after full documentation and verification from NGO.Any issues regarding registration 
+		and any miscellanous problems regarding child record will be handled by admin.After registration children will be
+		provided with child id and password to view its record.
+		
+		Orphan Child will have to come along with guardian carrying full documentation to the nearest NGO's centre to verify 
+		its eligibility to get registered and avail the benefits of the financial and non financial support.After Registration to
+		to the portal ,respective child will be provided with unique child id and password to view its record .In child ,record will 
+		be having unique id, name ,guardian name,address,monthly payment ,child age.
+		
+		Be a friend concept is unique to this portal,where anyone can make an impact into child's life by contributing their time to
+		become a mentor in his/her life.We will be providing NGO's address and contact no ,where volunteer has to be registerd with 
+		NGO to be part of activities conducted in nearby instituion which will includes orphans ,volunteers of NGO's.
+		
+		Financial support include monetary donations(donation link) from anonymous and non-anonymous donators.Records of non Anonymous donations
+		will be maintained by the portal.Records will include its name,contact no ,emailid and amount donated.
+
+		Non financial support include any kind of donation which can be items useful for a child like books,clothing,bedding,stationaries
+		and any items useful .	
+		
+		Visitors can see objective's of this portal and read about portal	 
+		 
+			
+               
+---------------------------------------------------------------------------------------------------------------------------	
+	
+NonFunctional Requirement:
+
+	Security
+		Registered Customer will allowed to place an order.	
+		Each stakeholder will be to access system  through authentication process. Who are you ?
+		System will provide access to  the content , operations using Role based security (Authorization) (Permissions based on Role)
+		Using SSL in all transactions  which will be performed stakeholder. It would protect confidential information shared by system to 
+		stake holder of Shared by stakeholder to system.
+		System will automatically log of  all stakeholder after some time due to inactiveness.
+		System will block operations for inactive  stakeholder and would redirect for authentication.
+		System  will internally maintain secure communiction channel between Servers ( Web Servers, App Servers, databse Server)
+		Sensitive data will be always encrypted across communcation.
+		User proper firewall to protect servers from out side fishing, velnerable attacks.
+
+
+	Reliability
+		The system will backup child data on regular basis and recover in short time duration to keep system 		operational.
+		Continous updates are maintained , continous Adminstration is done to keep system operational.
+		During peak hours system will maintain same user experience by managing load balancing .
+
+	Availability
+		 uptime:   24* 7  available
+		 
+	
+	Maintainability:
+		A Commercial database software will be used to maintain System data Persistence.
+		A readymade Web Server will be installed to host online portal (Web Site) to manage server capabilities.
+		IT operations team will easily monitor and configure System using Adminstrative tools provided by Servers.
+		Separate enviornment will be maintained for system for isolation in  production, testing, and development.
+
+	Portablility:
+			PDA: Portable Device Application
+		  System will provide portable User Interface ( HTML, CSS, JS) through  users will be able to access online 			 portal.
+		  System can be deployed to single server, multi server, to any OS, Cloud (Azure or AWS or GCP)
+
+	Accessibility:
+		Only registered child and admin will be able to  see details after authentication.
+		Admin can register and approve  child identification requests  based on documentation provided.
+		Registered child  will be able to view  monthly, annual child support availability through customized dashboard.
+		Admin will be able to see List of childen and child details and can solve any issue regarding financial and non financial 		support.
+
+	Durability:
+		  
+		  System will implement backup and recovery for retaining child data, operation data  over time.
+
+	Efficiency:
+		 Maximum number of users  will be able donate,admin can view no of donation same response time.
+		System will be able to manage all transactions with isolation.
+
+	Modularity:
+		 System will designed and developed using reusable, independent or dependent business senarios in the form 		of modules.
+		 These modules will be loosely coupled and highly cohesive.
+		 System will contain Donation link(anonymous and non-anonymous) ,Be A Friend link,Admin login ,child login 		 contact details, purpose of project and to view records of donation.  
+		 
+	
+	Scalability:
+		System will be able  to  provide  consistent user exeprience to stake holder as well as vistors irrespective 		of load.
+
+	Safety:
+		
+		online portal will be secure from malicious attack, fishing.
+		online  portal will be always kept updated with latest anit virus software.
+		data will be backed up periodically to ensure safty of data using increamental back up strategy.
+		Role based security will be applied for Application data and operations accessibility.
+				
+
+
+	Use Case Diagram:  ( UML)
+		Object Oriented Analyis and Design Notation: UML--------Unified Modeling language		Design Phase:
+
+			Use case diagram
+			Activity diagram
+			State Transition diagram
+			Class diagram
+			deployment diagram
+			object diagram
+	
+
+
+Analysis:
+	Actors:
+		visitors
+		child
+		Admin team
+		Anonymous donators
+		Non anonymous donators
+		
+		
+	  identify essential characteristics of online portal
+		we have identified use cases
+
+		1.Child  use case
+		2.Admin  use case
+		3.Donation Processing use case
+		4.non financial(donation) use case
+
+
+ Tables:
+
+		mySQL Database 
+		
+                .Child Status
+                          Child_id, Child_name ,Child_payment,Date_of_payment_Delivered
+                .User
+                         User_name,User_Password,User_Role
+            
+                .ViewDonators
+                         Name_of_Donator,Donated_Amount,Donator_Phone_Number
+
+
+
+REST API
+		1.ProductCatalog API
+		2.CustomerReleationship API
+		3.Orders API
+		4.Payment Rest API
+		5.Membership REST API
+					register
+					Validate
+					Changepassword
+		6.ShoppingCart API
+				GetAll
+				AddtoCart
+				RemoveFromCart
+				GetItemDetails 
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
